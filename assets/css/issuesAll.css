@@ -161,8 +161,22 @@ table, th, td {
     color: rgb(0, 119, 255);
 }
 
-.statusButton{
+.statusOpen{
     background-color: var(--green);
+    color: ivory;
+    border: none;
+    border-radius: 2px;
+}
+
+.statusClosed{
+    background-color: var(--orange);
+    color: ivory;
+    border: none;
+    border-radius: 2px;
+}
+
+.statusInProgress{
+    background-color: var(--yellow);
     color: ivory;
     border: none;
     border-radius: 2px;

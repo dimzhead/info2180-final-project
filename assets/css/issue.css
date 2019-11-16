@@ -1,16 +1,16 @@
 body{
     height: 100%;
     font-family: sans-serif;
-    font-weight: bold;
 	margin: 0;
 	background-color: white; 
 }
 #banner{
+    width: 100vw;
     height: 70px;
     display: grid;
     text-align: left;
     background-color: black;
-    grid-template-columns: 10% 70%;
+    grid-template-columns: 10% 90%;
     align-items: center;
 }
 
@@ -28,7 +28,11 @@ body{
 
 .sidebar{
     background-color: lightgray;
-    width: 200px;
+    width: 20%;
+}
+
+.rightBar{
+    width: 30%;
 }
 
 .side-icon{
@@ -40,38 +44,21 @@ body{
 }
 
 .main-area{
-    align-content: flex-start;
-	display: grid;
-	grid-column-gap: 10em;
+    width: 50%;
 	margin: 0
 }
+
 
 .page{
+    width: 100vw;
     height: 100vh;
 	display: grid;
-	grid-column-gap: 10em;
-	grid-template-columns: 30% 70%;
+	grid-template-columns: 20% 50% 30%;
 	margin: 0
 }
 
-input{
-    width: 400px;
-    height: 30px;
-    border-style: solid;
-    border-color: rgb(124, 129, 134);
-    border-width: 1px;
-    border-radius: 4px;
-}
-
-.submit{
-    border-style: solid;
-    margin-top: 50px;
-    border-color: white;
-    color: white;
-    height: 35px;
-    width: 100px;
-    background-color: steelblue;
-    border-radius: 4px;
+button{
+    font-style: bold;
 }
 
 li{
@@ -98,4 +85,6 @@ li:hover {
   }
 
 
-  
+p{
+    font-style: normal;
+}
