@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>INFO2180-Final-Project</title>
-    <link rel="stylesheet" href="assets/css/newUser.css" />
+    <link rel="stylesheet" href="assets/css/issue.css" />
     <script src="app.js"></script>
 </head>
 
@@ -22,20 +22,20 @@
 
         <div class="sidebar">
             <ul>
-                <a href="">
+                <a href="issuesAll.html">
                     <li>
                         <img src="assets/images/home.png" alt="" class="side-icon">
                         Home
                     </li>
                 </a>
 
-                <a href="">
+                <a href="newUser.html">
                     <li>
                         <img src="assets/images/add-user.png" alt="" class="side-icon">
                         Add User
                     </li>
                 </a>
-                <a href="">
+                <a href="createIssue.html">
                     <li>
                         <img src="assets/images/plus.png" alt="" class="side-icon">
                         New Issue
@@ -55,15 +55,26 @@
         <div class="main-area">
 
 
-                <h1 class = 'issueName'>XSS Vulnerability in Add User Form</h1>
+            <h1 class = 'issueName'>XSS Vulnerability in Add User Form</h1>
            
-            <div class = "issueNum">
-                <h3>Issue #100</h3> 
+            <div class = "issuetxt">
+                <h3 id = issue>Issue #</h3> 
+                <h3 class="issueNum">100</h3> 
             </div>
             <p class = "desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni velit voluptates ex consequatur est incidunt voluptatibus magnam exercitationem facilis, iure porro id vel obcaecati architecto. Sed accusantium commodi perspiciatis eius?
             </p>
-                        
+                     
+            <button type="button" class="collapsible">Open Collapsible</button>
+            <div class="content">
+            <p>Lorem</p>
+            </div>
+
+            <button type="button" class="collapsible">Open Collapsible</button>
+            <div class="content">
+            <p>Lorem</p>
+            </div>
+
         </div>
 
         <div class="rightBar">
@@ -77,7 +88,7 @@
             <h4>Status:</h4>
             <div class="issueStat">Open</div>
 
-            <hr>
+            <hr class = 'bighr'>
             <button class="markClosed">Mark as Closed</button>
             <button class="markInPro">Mark in Progress</button>
         </div>
