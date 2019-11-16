@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>INFO2180-Final-Project</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/issuesAll.css" />
     <script src="app.js"></script>
 </head>
 
@@ -53,32 +53,42 @@
         </div>
 
         <div class="main-area">
-            <div>
-                <h1>New User</h1>
+            <div class = 'topRow'>
+                <h1>Issues</h1>
+                <button class="createIssue" type="button">Create New Issue</button>
+                
+            </div>
+                <div class = secRow>
+                <h3>Filter by:</h3>
+                <button class="allButton" type="button">ALL</button>
+                <button class="openButton" type="button">OPEN</button>
+                <button class="myTicketButton" type="button">MY TICKET</button>
             </div>
 
-            <div>
-                <form>
-                    <br>
-                    <br>
-                    First name:<br>
-                    <input type="text" name="firstname">
-                    <br><br>
-                    Last name:<br>
-                    <input type="text" name="lastname">
-                    <br><br>
-                    Email:<br>
-                    <input type="text" name="email">
-                    <br><br>
-                    Password:<br>
-                    <input type="text" name="password">
-                </form>
+            <table style="width:100%">
+                    <tr>
+                      <th>Title</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                      <th>Assigned To</th>
+                      <th>Created</th>
+                    </tr>
+                    <tr>
+                      <td class = 'issueTitle'> 
+                          <div class = 'issueNum'>#100</div>
+                          <div class = 'issueName'>
+                              XSS Vulnerability in Add User Form</div>
+                        </td>
+                      <td class = 'issueType'>Bug</td>
+                      <td class = 'issueStat'>
+                            <button class="statusButton" type="button">OPEN</button>
+                        </td>
+                      <td class = 'issueAssTo'>Tom Brady</td>
+                      <td class = 'issueDate'>2019-11-01</td>
+                    </tr>
 
-            </div>
+                  </table>
 
-            <div>
-                <button class="submit" type="button">Submit</button>
-            </div>
         </div>
 
     </div>
