@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>INFO2180-Final-Project</title>
-    <link rel="stylesheet" href="assets/css/newUser.css" />
+    <link rel="stylesheet" href="assets/css/issue.css" />
     <script src="app.js"></script>
 </head>
 
@@ -22,20 +22,20 @@
 
         <div class="sidebar">
             <ul>
-                <a href="">
+                <a href="issuesAll.html">
                     <li>
                         <img src="assets/images/home.png" alt="" class="side-icon">
                         Home
                     </li>
                 </a>
 
-                <a href="">
+                <a href="newUser.html">
                     <li>
                         <img src="assets/images/add-user.png" alt="" class="side-icon">
                         Add User
                     </li>
                 </a>
-                <a href="">
+                <a href="createIssue.html">
                     <li>
                         <img src="assets/images/plus.png" alt="" class="side-icon">
                         New Issue
@@ -53,37 +53,48 @@
         </div>
 
         <div class="main-area">
-            <div>
-                <h1>New User</h1>
+
+
+            <h1 class = 'issueName'>XSS Vulnerability in Add User Form</h1>
+           
+            <div class = "issuetxt">
+                <h3 id = issue>Issue #</h3> 
+                <h3 class="issueNum">100</h3> 
+            </div>
+            <p class = "desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni velit voluptates ex consequatur est incidunt voluptatibus magnam exercitationem facilis, iure porro id vel obcaecati architecto. Sed accusantium commodi perspiciatis eius?
+            </p>
+                     
+            <button type="button" class="collapsible">Open Collapsible</button>
+            <div class="content">
+            <p>Lorem</p>
             </div>
 
-            <div>
-                <form>
-                    <br>
-                    <br>
-                    First name:<br>
-                    <input type="text" name="firstname">
-                    <br><br>
-                    Last name:<br>
-                    <input type="text" name="lastname">
-                    <br><br>
-                    Email:<br>
-                    <input type="text" name="email">
-                    <br><br>
-                    Password:<br>
-                    <input type="text" name="password">
-                </form>
-
+            <button type="button" class="collapsible">Open Collapsible</button>
+            <div class="content">
+            <p>Lorem</p>
             </div>
 
-            <div>
-                <button class="submit" type="button">Submit</button>
-            </div>
         </div>
 
+        <div class="rightBar">
+            <hr>
+            <h4>Assigned To:</h4>
+            <div class="issueAss">Tom Brady</div>
+            <h4>Type:</h4>
+            <div class="IssueType">Proposal</div>
+            <h4>Priority:</h4>
+            <div class="issuePri">Major</div>
+            <h4>Status:</h4>
+            <div class="issueStat">Open</div>
+
+            <hr class = 'bighr'>
+            <button class="markClosed">Mark as Closed</button>
+            <button class="markInPro">Mark in Progress</button>
+        </div>
+
+
     </div>
-
-
 </body>
 
 </html>
