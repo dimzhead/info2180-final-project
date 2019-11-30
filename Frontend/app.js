@@ -9,7 +9,7 @@ $(document).ready(function () {
 let email= $("#email").val();
 let password= $("#password").val();
 
-        $.ajax("loginUser.php", {
+        $.ajax("Backend/loginUser.php", {
             method: "POST",
             data: {
                 email:email,

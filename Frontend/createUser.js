@@ -13,7 +13,7 @@ let lname= $("#lastname").val();
 let email= $("#email").val();
 let password= $("#password").val();
 
-        $.ajax("createUser.php", {
+        $.ajax("Backend/createUser.php", {
             method: "POST",
             data: {
                 firstname:  fname,
