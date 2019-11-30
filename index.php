@@ -2,8 +2,8 @@
 
 session_start();
 
-if(!empty($_SESSION['user'])) {
-    require_once 'home.php';
+if(isset($_SESSION['user'])) {
+    header("Location:./dashboard.html");
 } else {
-    require_once 'loginUser.php';
+    header("Location:./login.html");
 }
