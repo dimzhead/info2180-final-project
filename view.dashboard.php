@@ -12,7 +12,7 @@
         <tbody>
             <?php foreach ($rows as $row) : ?>
                 <tr>
-                    <td><?= $row['title']; ?></td>
+                    <td><?= "#" . $row['id'] . " " . $row['title']; ?></td>
                     <td><?= $row['type']; ?></td>
                     <td><?= $row['status']; ?></td>
                     <td><?= $row['assigned_to']; ?></td>
@@ -21,4 +21,6 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-<?php endif;
+<?php else :
+    echo "No issues";
+endif;

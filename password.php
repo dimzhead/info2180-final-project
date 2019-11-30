@@ -1,8 +1,8 @@
 <?php
 
 $host = getenv('IP');
-$db = '';
-$username = '';
+$db = 'schema.sql';
+$username = 'root';
 $password = '';
 
 function validatePassword($pword) {
