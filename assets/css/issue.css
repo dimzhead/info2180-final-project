@@ -34,8 +34,10 @@ body{
 }
 
 .rightBar{
-    width: 30%;
-    margin: 0;
+    height: 450px;
+    padding:20px;
+    margin-top: 40px;
+    background-color: #1111;
 }
 
 .side-icon{

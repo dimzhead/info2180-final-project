@@ -6,6 +6,7 @@
 
 body{
     height: 100%;
+    width: 100%;
     font-family: sans-serif;
 	margin: 0;
 	background-color: white; 
@@ -75,7 +76,7 @@ body{
     border-style: solid;
     border-color: white;
     color: white;
-    height: 25px;
+    height:35px;
     width: 60px;
     background-color: rgb(22, 108, 200);
     border-radius: 4px;  
@@ -85,7 +86,7 @@ body{
     border-style: solid;
     border-color: white;
     color: white;
-    height: 25px;
+    height: 35px;
     width: 80px;
     background-color: rgb(22, 108, 200);
     border-radius: 4px;  
@@ -95,7 +96,7 @@ body{
     border-style: solid;
     border-color: white;
     color: white;
-    height: 25px;
+    height: 35px;
     width: 100px;
     background-color: rgb(22, 108, 200);
     border-radius: 4px;  
