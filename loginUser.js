@@ -1,34 +1,26 @@
-$(document).ready(function () {
+window.onload = function(){
+    var submit = document.getElementById('submit')
 
-
-    $('#submit').on('click', function (e) {
+    submit.addEventListener('click',function(e){
         e.preventDefault();
+        var email = document.getElementById('email').value
+        var password = document.getElementById('password').value;
+        var user = {}
+        user.email=email
+        user.password=password
+        var xhr = new XMLHttpRequest();
+        // JSON.stringify(user)
+        
+        xhr.open('GET',"/backend/test.php",true)
 
-        let email = $("#email").val();
-        let password = $("#password").val();
-
-        $.ajax("loginUser.php", {
-            method: "POST",
-            data: {
-                email: email,
-                password: password
-
-            }
-        }).done(function (response) {
-            //$('#result').html(response);
-            //$(document).html(response);
-            console.log(response);
-            if(response === 'ok') {
-                window.location = response;
-            }
-            //window.location = response;
-            if (response == false) {
-                $('#result').html("<h2> ERROR </h2>" + "<br>" + "The email address or password is incorrect");
-            }
-
-        }).fail(function () {
-            alert("An error occured. loginUser.js");
-        });
-    });
-
-});
+        xhr.onload = function(){
+        if(this.status == 200){
+            console.log(this.response)
+        }else{
+            console.log(this.status)
+        }
+            
+        }
+        xhr.send(JSON.stringify(user));
+    })
+}
