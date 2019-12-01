@@ -28,7 +28,7 @@ body{
 }
 
 .sidebar{
-    width: ;
+    width: 200px;
     background-color: lightgray;
     height: 100vh;
 }
@@ -47,7 +47,7 @@ body{
 }
 
 .main-area{
-    width: 50%;
+    width: 80%;
     margin-left: 10%;
     margin-right: 0%
 }
@@ -57,7 +57,7 @@ body{
     width: 100vw;
     height: 100vh;
 	display: grid;
-	grid-template-columns: 20% 50% 30%;
+	grid-template-columns: 200px 55% 20%;
     margin: 0
 }
 
@@ -133,13 +133,17 @@ p{
 }
 
 /* trying to make a colapsible */
-.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
+
+
+.issue-info {
+    color: #555;
   }
+
+#issuecreate {
+    padding-top: 40px;
+}
+
+.arrow {
+    color: black;
+    size: 4px;
+}

@@ -22,48 +22,48 @@
 
 
         <div class="sidebar">
-                <ul>
-                    <a href="issuesAll.html">
-                        <li>
-                            <img src="assets/images/home.png" alt="" class="side-icon">
-                            Home
-                        </li>
-                    </a>
-    
-                    <a href="newUser.html">
-                        <li>
-                            <img src="assets/images/add-user.png" alt="" class="side-icon">
-                            Add User
-                        </li>
-                    </a>
-                    <a href="createIssue.html">
-                        <li>
-                            <img src="assets/images/plus.png" alt="" class="side-icon">
-                            New Issue
-                        </li>
-                    </a>
-    
-                    <a href="">
-                        <li>
-                            <img src="assets/images/power.png" alt="" class="side-icon">
-                            Logout
-                        </li>
-                    </a>
-    
-                </ul>
-            </div>
+            <ul>
+                <a href="issuesAll.html">
+                    <li id = 'home'>
+                        <img src="assets/images/home.png" alt="" class="side-icon">
+                        Home
+                    </li>
+                </a>
+
+                <a href="newUser.html">
+                    <li id = 'add-user'>
+                        <img src="assets/images/add-user.png" alt="" class="side-icon">
+                        Add User
+                    </li>
+                </a>
+                <a href="createIssue.html">
+                    <li id = 'new-issue'>
+                        <img src="assets/images/plus.png" alt="" class="side-icon">
+                        New Issue
+                    </li>
+                </a>
+
+                <a href="">
+                    <li id = 'logout'>
+                        <img src="assets/images/power.png" alt="" class="side-icon">
+                        Logout
+                    </li>
+                </a>
+
+            </ul>
+        </div>
 
         <div class="main-area">
             <div class = 'topRow'>
                 <h1>Issues</h1>
-                <button class="createIssue" type="button">Create New Issue</button>
+                <button class="createIssue" type="submit" id = 'submit_createissue'>Create New Issue</button>
                 
             </div>
                 <div class = secRow>
                 <h3>Filter by:</h3>
-                <button class="allButton" type="button">ALL</button>
-                <button class="openButton" type="button">OPEN</button>
-                <button class="myTicketButton" type="button">MY TICKET</button>
+                <button class="allButton" type="submit" id = 'all'>ALL</button>
+                <button class="openButton" type="submit" id = 'open'>OPEN</button>
+                <button class="myTicketButton" type="submit" id = 'tickets'>MY TICKET</button>
             </div>
 
             <table style="width:100%">
@@ -77,16 +77,16 @@
 
                     <tr>
                       <td class = 'issueTitle'> 
-                          <div class = 'issueNum'>#100</div>
-                          <div class = 'issueName'>
+                          <div class = 'issueNum' id = 'issuenum'>#100</div>
+                          <div class = 'issueName' id = 'issuename'>
                               XSS Vulnerability in Add User Form</div>
                         </td>
-                      <td class = 'issueType'>Bug</td>
-                      <td class = 'issueStat'>
+                      <td class = 'issueType' id = 'issuetype'>Bug</td>
+                      <td class = 'issueStat' id = 'issuestat'>
                             <button class="statusOpen" type="button">OPEN</button>
                         </td>
-                      <td class = 'issueAssTo'>Tom Brady</td>
-                      <td class = 'issueDate'>2019-11-01</td>
+                      <td class = 'issueAssTo' id = 'issueass'>Tom Brady</td>
+                      <td class = 'issueDate' id = 'issuedate'>2019-11-01</td>
                     </tr>
 
                   </table>

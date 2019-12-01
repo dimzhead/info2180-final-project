@@ -106,6 +106,6 @@ li:hover {
 }
 
 #description{
-    columns = 40;
-    rows = 5;
+    columns: 40;
+    rows: 5;
 }

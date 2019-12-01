@@ -127,8 +127,8 @@ let password= $("#password").val();
 
     createissue.on('click', function(e){
         e.preventDefault();
-let title= $("#title").val();
-let description= $("#description").val();
+let title= $("#issue-title").val();
+let description= $("#issue-description").val();
 let assign= $("#assignto").val();
 let priority= $("#priority").val();
 let type= $("#type").val();
