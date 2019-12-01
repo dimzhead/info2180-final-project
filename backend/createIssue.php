@@ -3,6 +3,7 @@ require_once "password.php";
 
 session_start();
 
+
 if (isset($_SESSION['id'])) {
     try {
         $conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $username, $password);

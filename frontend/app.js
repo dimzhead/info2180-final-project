@@ -9,7 +9,7 @@ $(document).ready(function () {
 let email= $("#email").val();
 let password= $("#password").val();
 
-        $.ajax("loginUser.php", {
+        $.ajax("info2180-final-project\backend\loginUser.php", {
             method: "POST",
             data: {
                 email:email,
@@ -65,7 +65,7 @@ let password= $("#password").val();
         e.preventDefault();
 
 
-        $.ajax("createUser.php", {
+        $.ajax("info2180-final-project\backend\createUser.php", {
             method: "POST",
             data: {
                 filter_by:  "ALL"
@@ -86,7 +86,7 @@ let password= $("#password").val();
         e.preventDefault();
 
 
-        $.ajax("createUser.php", {
+        $.ajax("info2180-final-project\backend\createUser.php", {
             method: "POST",
             data: {
                 filter_by:  "OPEN"
@@ -107,7 +107,7 @@ let password= $("#password").val();
         e.preventDefault();
 
 
-        $.ajax("createUser.php", {
+        $.ajax("C:info2180-final-project\backend\createUser.php", {
             method: "POST",
             data: {
                 filter_by:  "MY TICKETS"
@@ -138,7 +138,7 @@ var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 var dateTime = date+' '+time;
 
-        $.ajax("createUser.php", {
+        $.ajax("info2180-final-project\backend\createIssue.php", {
             method: "POST",
             data: {
                 title:  title,
@@ -170,7 +170,7 @@ var dateTime = date+' '+time;
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date+' '+time;
-        $.ajax("createUser.php", {
+        $.ajax("info2180-final-project\backend\createUser.php", {
             method: "POST",
             data: {
                 updatedate: dateTime
@@ -198,7 +198,7 @@ var dateTime = date+' '+time;
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date+' '+time;
-        $.ajax("createUser.php", {
+        $.ajax("info2180-final-project\backend\createUser.php", {
             method: "POST",
             data: {
                 updatedate: dateTime
