@@ -137,18 +137,18 @@ $(document).ready(function () {
         var today = new Date();
         var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date + ' ' + time;
+        //var dateTime = date + ' ' + time;
 
-        $.ajax("createUser.php", {
+        $.ajax("createIssue.php", {
             method: "POST",
             data: {
                 title: title,
                 description: description,
                 assign: assign,
                 type: type,
-                priority: priority,
-                createdate: dateTime,
-                updatedate: dateTime
+                priority: priority
+                //createdate: dateTime,
+                //updatedate: dateTime
 
             }
         }).done(function (response) {
