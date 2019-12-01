@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(30) DEFAULT NULL,
   `lastname` varchar(30) DEFAULT NULL,
-  `password` varchar(30) DEFAULT NULL,
+  `password` varchar(500) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `date_joined` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `password`, `email`, `date_joined`) VALUES
-(1, 'ADMIN', 'ADMIN', 'password123', 'admin@bugme.com', '2019-11-28 20:23:39');
+(1, 'ADMIN', 'ADMIN', MD5('password123'), 'admin@bugme.com', '2019-11-28 20:23:39');
 
 --
 -- Constraints for dumped tables

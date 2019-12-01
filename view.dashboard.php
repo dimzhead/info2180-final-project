@@ -12,8 +12,8 @@
         <tbody>
             <?php foreach ($rows as $row) : ?>
                 <tr>
-                    <td><?= "#" . $row['Issues.id'] . " " . $row['Issues.title']; ?></td>
-                    <td><?= $row['Issues.type']; ?></td>
+                    <td class="issueTitle"><?= "#" . $row['Issues.id'] . " " . $row['Issues.title']; ?></td>
+                    <td class=""><?= $row['Issues.type']; ?></td>
                     <td><?= $row['Issues.status']; ?></td>
                     <td><?= $row['Users.firstname'] . " " . $row['Users.lastname'] ; ?></td>
                     <td><?= $row['Issues.created']; ?></td>

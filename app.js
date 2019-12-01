@@ -20,9 +20,9 @@ $(document).ready(function () {
 
             if (response == false) {
                 $('#result').html("<h2> ERROR </h2>" + "<br>" + "The email address or password is incorrect");
-            } //else {
-                //window.location = "newUser.html";
-            //}
+            } else {
+                window.location = "issuesAll.html";
+            }
 
         }).fail(function () {
             alert("An error occured.");
