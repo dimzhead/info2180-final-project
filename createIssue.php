@@ -18,7 +18,8 @@ if (isset($_SESSION['id'])) {
                     $type = filter_input(INPUT_POST, $_POST['type'], FILTER_SANITIZE_STRING);
                     $priority = filter_input(INPUT_POST, $_POST['priority'], FILTER_SANITIZE_STRING);
                     $status = "Open";
-                    $assignedTo = filter_input(INPUT_POST, $_POST['assignedTo'], FILTER_SANITIZE_STRING);
+                    $assignedTemp = filter_input(INPUT_POST, $_POST['assignedTo'], FILTER_SANITIZE_STRING);
+                    //$assignedTo = $
                     $createdBy = $_SESSION['id'];
                     $created = date("Y-m-d");
                     $updated = date("Y-m-d");
