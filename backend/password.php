@@ -1,6 +1,6 @@
 <?php
 
-$host = getenv('IP');
+$host = 'localhost';
 $db = 'schema';
 $username = 'root';
 $password = '';

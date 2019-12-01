@@ -3,20 +3,20 @@ $(document).ready(function () {
 
     $('#submit').on('click', function(e){
         e.preventDefault();
-        e.href="newUser.html";
+        // e.href="newUser.html";
         
         
 
 let email= $("#email").val();
 let password= $("#password").val();
 
-        $.ajax({url:"info2180-final-project/backend/loginUser.php", type: "POST",
+        $.post({url:"/backend/loginUser.php", type: "POST",
             data: {
                 email:email,
                 password:password
             }        
         }).done(function(response){
-            
+            console.log(this.status)
             if (response==false){
                 $('#result').html("<h2> ERROR </h2>" + "<br>" + "The email address or password is incorrect"); 
             } else {
@@ -64,7 +64,7 @@ let password= $("#password").val();
         e.preventDefault();
 
 
-        $.ajax("info2180-final-project\backend\createUser.php", {
+        $.ajax("info2180-final-project/backend/createUser.php", {
             method: "POST",
             data: {
                 filter_by:  "ALL"
@@ -85,7 +85,7 @@ let password= $("#password").val();
         e.preventDefault();
 
 
-        $.ajax("info2180-final-project\backend\createUser.php", {
+        $.ajax("info2180-final-project/backend/createUser.php", {
             method: "POST",
             data: {
                 filter_by:  "OPEN"
@@ -106,7 +106,7 @@ let password= $("#password").val();
         e.preventDefault();
 
 
-        $.ajax("C:info2180-final-project\backend\createUser.php", {
+        $.ajax("C:info2180-final-project/backend/createUser.php", {
             method: "POST",
             data: {
                 filter_by:  "MY TICKETS"
@@ -137,7 +137,7 @@ var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 var dateTime = date+' '+time;
 
-        $.ajax("info2180-final-project\backend\createIssue.php", {
+        $.ajax("info2180-final-project/backend/createIssue.php", {
             method: "POST",
             data: {
                 title:  title,
@@ -169,7 +169,7 @@ var dateTime = date+' '+time;
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date+' '+time;
-        $.ajax("info2180-final-project\backend\createUser.php", {
+        $.ajax("info2180-final-project/backend/createUser.php", {
             method: "POST",
             data: {
                 updatedate: dateTime
@@ -197,7 +197,7 @@ var dateTime = date+' '+time;
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date+' '+time;
-        $.ajax("info2180-final-project\backend\createUser.php", {
+        $.ajax("info2180-final-project/backend/createUser.php", {
             method: "POST",
             data: {
                 updatedate: dateTime

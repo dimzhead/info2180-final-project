@@ -7,18 +7,19 @@ require_once "password.php";
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // echo 'true';
     if (!empty($_POST)) {
         if (!empty($_POST['email']) and !empty($_POST['password'])) {
             
             try {
                 $conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $username, $password);
 
-                $stmt = $conn->prepare("SELECT if ((SELECT password from users where email = :e) = MD5('password123'),'true','false') as valid");
+                $stmt = $conn->prepare("SELECT if ((SELECT password from users where email = :e) = MD5($password),'true','false') as valid");
 // "SELECT if ((SELECT password from users where email = 'admin@bugme.com') = MD5('password123'),'true','false') as valid"
 // "SELECT* FROM Users WHERE email = :e"
                 $tempEmail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
                 
-                $password = validatePassword(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
+                $userpassword = validatePassword(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
 
                 $email = filter_var($tempEmail, FILTER_VALIDATE_EMAIL);
 
