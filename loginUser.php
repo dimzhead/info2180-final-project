@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 
-                if($email === "admin@bugme.com") {
+                if($email === "admin@bugme.com" and $password = 'password123') {
                     echo "admin logged in";
                     $_SESSION['id'] = $user['id'];
                     $_SESSION['email'] = $user['email'];

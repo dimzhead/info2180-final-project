@@ -6,7 +6,7 @@ if (isset($_SESSION['id'])) {
     if ($_SESSION['email'] === 'admin@bugme.com') {
         header("Location:newUser.html");
     } else {
-        header("Location:./newUser.html");
+        header("Location:./dashboard.html");
     }
 } else {
     header("Location:./login.html");

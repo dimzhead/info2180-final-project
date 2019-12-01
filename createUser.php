@@ -9,8 +9,9 @@ try {
     $conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $username, $password);
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        if (isset($_POST['firstname']) and isset($_POST['lastname']) and isset($_POST['email']) and isset($_POST['passsword'])) {        //check the variable used for username
-            $stmt = $conn -> prepare("INSERT INTO Users (firstname, lastname, password, email, date_joined) VALUES (:i, :f, :l, :e, :p, :d)");
+        if (isset($_POST['firstname']) and isset($_POST['lastname']) and isset($_POST['email']) and isset($_POST['password'])) {        //check the variable used for username
+            var_dump($_POST);
+            $stmt = $conn -> prepare("INSERT INTO Users (firstname, lastname, password, email, date_joined) VALUES (:f, :l, :e, :p, :d)");
 
             
             $first = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
@@ -29,7 +30,9 @@ try {
             $stmt -> bindParam(':d', $date, PDO::PARAM_STR);
 
             $stmt -> execute();
-        }  
+        } else {
+            echo "No data in createUser.php";
+        } 
     }
 } catch (Exception $e) {
     alert($e -> getMessage());
