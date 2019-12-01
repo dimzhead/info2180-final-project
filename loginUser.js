@@ -17,7 +17,11 @@ $(document).ready(function () {
         }).done(function (response) {
             //$('#result').html(response);
             //$(document).html(response);
-            window.location = response;
+            console.log(response);
+            if(response === 'ok') {
+                window.location = response;
+            }
+            //window.location = response;
             if (response == false) {
                 $('#result').html("<h2> ERROR </h2>" + "<br>" + "The email address or password is incorrect");
             }

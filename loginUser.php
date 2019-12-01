@@ -28,17 +28,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 
                 if($email === "admin@bugme.com" and $password = 'password123') {
-                    echo "admin logged in";
+                    echo "ok";
                     $_SESSION['id'] = $user['id'];
                     $_SESSION['email'] = $user['email'];
                 } else {
                     if (password_verify($password, $user['password'])) {
-                        //echo "valid user";
+                        echo "ok";
                         $_SESSION['id'] = $user['id'];
                         $_SESSION['email'] = $user['email'];
                         //header("Location:./dashboard.html");
                     } else {
-                        echo "Invalid username or password";
+                        echo "Invalid username or password. loginUser.php\n";
+                        echo $user['password'];
+                        echo "\n";
+                        echo password_hash($password, PASSWORD_DEFAULT);
                     }
                 }
                 

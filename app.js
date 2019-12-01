@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     $('#submit').on('click', function (e) {
-        e.href = "newUser.html";
+        //e.href = "newUser.html";
 
 
 
@@ -20,9 +20,9 @@ $(document).ready(function () {
 
             if (response == false) {
                 $('#result').html("<h2> ERROR </h2>" + "<br>" + "The email address or password is incorrect");
-            } else {
-                window.location = "newUser.html";
-            }
+            } //else {
+                //window.location = "newUser.html";
+            //}
 
         }).fail(function () {
             alert("An error occured.");
@@ -51,6 +51,7 @@ $(document).ready(function () {
 
             }
         }).done(function (response) {
+            console.log(response);
             alert("successfully sent to the database to be added")
         }).fail(function () {
             // alert("An error occured.");
@@ -215,7 +216,11 @@ $(document).ready(function () {
     logout.on('click', function(e) {
         e.preventDefault();
 
-        $.ajax("logout.php").done(function () {
+        $.ajax("logout.php", 
+        {
+            method: "POST",
+            data: {}
+        }).done(function () {
             alert("Successfully logged out");
         }).fail(function() {
             alert("An error occured.");
