@@ -3,7 +3,7 @@
 $host = getenv('IP');
 $db = 'schema';
 $username = 'root';
-$password = 'D3!t31';
+$password = '';
 
 function validatePassword($pword) {
     if (strlen($pword) > 8) {

@@ -9,12 +9,10 @@ $(document).ready(function () {
 let email= $("#email").val();
 let password= $("#password").val();
 
-        $.ajax("info2180-final-project\backend\loginUser.php", {
-            method: "POST",
+        $.ajax({url:"info2180-final-project/backend/loginUser.php", type: "POST",
             data: {
                 email:email,
                 password:password
-
             }        
         }).done(function(response){
             
