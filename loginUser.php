@@ -1,17 +1,23 @@
 <?php
+
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+
 require_once "password.php";
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!empty($_POST)) {
-        if (isset($_POST['email']) and isset($_POST['password'])) {
+        if (!empty($_POST['email']) and !empty($_POST['password'])) {
+            
             try {
                 $conn = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $username, $password);
 
                 $stmt = $conn->prepare("SELECT* FROM Users WHERE email = :e");
 
-                $tempEmail = filter_input(INPUT_POST, $_POST['email'], FILTER_SANITIZE_EMAIL);
-                $password = validatePassword(filter_input(INPUT_POST, $_POST['password'], FILTER_SANITIZE_STRING));
+                $tempEmail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+                
+                $password = validatePassword(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
 
                 $email = filter_var($tempEmail, FILTER_VALIDATE_EMAIL);
 
@@ -20,15 +26,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $stmt->execute();
 
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-                if (password_verify($password, $user['password'])) {
-                    $_SESSION['id'] = $user['id'];
-                    header("Location:./dashboard.html");
-                } else {
-                    echo "Invalid username or password";
-                }
+                
+                //if($email === "admin@bugme.com") {
+                    //echo "admin logged in";
+                    //$_SESSION['id'] = $user['id'];
+                    //$_SESSION['email'] = $user['email'];
+                //} else {
+                    if (password_verify($password, $user['password'])) {
+                        //echo "valid user";
+                        $_SESSION['id'] = $user['id'];
+                        $_SESSION['email'] = $user['email'];
+                        //header("Location:./dashboard.html");
+                    } else {
+                        echo "Invalid username or password";
+                    }
+                //}
+                
             } catch (Exception $e) {
-                alert($e->getMessage());
+                echo "Cannot loginUser.php\n";
+                echo $e->getMessage();
             }
         }
     }

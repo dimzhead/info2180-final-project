@@ -1,18 +1,19 @@
 <?php
 
 $host = getenv('IP');
-$db = 'schema.sql';
+$db = 'schema';
 $username = 'root';
-$password = '';
+$password = 'D3!t31';
 
 function validatePassword($pword) {
     if (strlen($pword) > 8) {
-        if(preg_match('/[A-Z+0-9+]/', $pword)) {
+        if(preg_match('/[0-9+]/', $pword)) {
             return $pword;
         } else {
-            echo "Invalid password";
+            echo "Invalid password criteria\n";
         }
     } else {
-        echo "Invalid password";
+        echo "Invalid password length\n";
+        var_dump($pword);
     }
 }

@@ -12,11 +12,11 @@
         <tbody>
             <?php foreach ($rows as $row) : ?>
                 <tr>
-                    <td><?= "#" . $row['id'] . " " . $row['title']; ?></td>
-                    <td><?= $row['type']; ?></td>
-                    <td><?= $row['status']; ?></td>
-                    <td><?= $row['assigned_to']; ?></td>
-                    <td><?= $row['created']; ?></td>
+                    <td><?= "#" . $row['Issues.id'] . " " . $row['Issues.title']; ?></td>
+                    <td><?= $row['Issues.type']; ?></td>
+                    <td><?= $row['Issues.status']; ?></td>
+                    <td><?= $row['Users.firstname'] . " " . $row['Users.lastname'] ; ?></td>
+                    <td><?= $row['Issues.created']; ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
