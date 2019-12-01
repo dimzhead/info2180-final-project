@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>INFO2180-Final-Project</title>
+    <link rel="stylesheet" href="assets/css/issuesAll.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div id="banner">
+        <div>
+            <img src="assets/images/debug.png" alt="" id="main-icon">
+        </div>
+        <div id="title">BugMe Issue Tracker</div>
+    </div>
+
+    <div class="page">
+
+
+        <div class="sidebar">
+            <ul>
+                <a href="issuesAll.html">
+                    <li id = 'home'>
+                        <img src="assets/images/home.png" alt="" class="side-icon">
+                        Home
+                    </li>
+                </a>
+
+                <a href="newUser.html">
+                    <li id = 'add-user'>
+                        <img src="assets/images/add-user.png" alt="" class="side-icon">
+                        Add User
+                    </li>
+                </a>
+                <a href="createIssue.html">
+                    <li id = 'new-issue'>
+                        <img src="assets/images/plus.png" alt="" class="side-icon">
+                        New Issue
+                    </li>
+                </a>
+
+                <a href="">
+                    <li id = 'logout'>
+                        <img src="assets/images/power.png" alt="" class="side-icon">
+                        Logout
+                    </li>
+                </a>
+
+            </ul>
+        </div>
+
+        <div class="main-area">
+            <div class = 'topRow'>
+                <h1>Issues</h1>
+                <button class="createIssue" type="submit" id = 'submit_createissue'>Create New Issue</button>
+                
+            </div>
+                <div class = secRow>
+                <h3>Filter by:</h3>
+                <button class="allButton" type="submit" id = 'all'>ALL</button>
+                <button class="openButton" type="submit" id = 'open'>OPEN</button>
+                <button class="myTicketButton" type="submit" id = 'tickets'>MY TICKET</button>
+            </div>
+
+            <table style="width:100%">
+                    <tr>
+                      <th>Title</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                      <th>Assigned To</th>
+                      <th>Created</th>
+                    </tr>
+
+                    <tr>
+                      <td class = 'issueTitle'> 
+                          <div class = 'issueNum' id = 'issuenum'>#100</div>
+                          <div class = 'issueName' id = 'issuename'>
+                              XSS Vulnerability in Add User Form</div>
+                        </td>
+                      <td class = 'issueType' id = 'issuetype'>Bug</td>
+                      <td class = 'issueStat' id = 'issuestat'>
+                            <button class="statusOpen" type="button">OPEN</button>
+                        </td>
+                      <td class = 'issueAssTo' id = 'issueass'>Tom Brady</td>
+                      <td class = 'issueDate' id = 'issuedate'>2019-11-01</td>
+                    </tr>
+
+                  </table>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

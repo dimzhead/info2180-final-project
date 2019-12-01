@@ -1,0 +1,184 @@
+:root {
+    --orange: rgb(240, 85, 15);
+    --green: rgb(49 ,161 ,101);
+    --yellow: rgb( 250, 215, 100);
+  }
+
+body{
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+	margin: 0;
+	background-color: white; 
+}
+#banner{
+    width: 100vw;
+    height: 70px;
+    display: grid;
+    text-align: left;
+    background-color: black;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+}
+
+#title{
+    display: grid;
+    color: white;
+}
+
+#main-icon{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 50px;
+	filter: invert(100%);
+}
+
+.sidebar{
+    background-color: lightgray;
+    width: 200px;
+}
+
+.side-icon{
+    width: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.main-area{
+    width: 100vh;
+    align-content: flex-start;
+	display: grid;
+	grid-column-gap: 1em;
+	margin: 0
+}
+
+.page{
+    height: 100vh;
+	display: grid;
+	grid-column-gap: 10em;
+	grid-template-columns: 20% 80%;
+	margin: 0
+}
+
+.createIssue{
+    border-style: solid;
+    border-color: white;
+    color: white;
+    height: 40px;
+    width: 160px;
+    background-color: rgb(49 ,161 ,101);
+    border-radius: 4px;
+}
+
+.allButton{
+    border-style: solid;
+    border-color: white;
+    color: white;
+    height:35px;
+    width: 60px;
+    background-color: rgb(22, 108, 200);
+    border-radius: 4px;  
+}
+
+.openButton{
+    border-style: solid;
+    border-color: white;
+    color: white;
+    height: 35px;
+    width: 80px;
+    background-color: rgb(22, 108, 200);
+    border-radius: 4px;  
+}
+
+.myTicketButton{
+    border-style: solid;
+    border-color: white;
+    color: white;
+    height: 35px;
+    width: 100px;
+    background-color: rgb(22, 108, 200);
+    border-radius: 4px;  
+}
+
+button{
+    font-style: bold;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    margin-inline-start: 0;
+    padding-top: 20px;
+    list-style-type: none;
+    align-items: center;
+  }
+
+ul{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    align-items: center;
+    color: rgb(20, 20, 20);
+}
+
+li:hover {
+    background-color: rgb(300, 300, 300);
+  }
+
+.topRow{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+.secRow{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10%;
+    grid-column-gap: 2em;
+    align-items: center;
+}
+
+table, th, td {
+    border-spacing: 1px;
+    text-align: start;
+}
+
+.issueTitle{
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+.issueNum{
+    margin: 0;
+    font-weight: bold;
+}
+
+.issueName{
+    margin: 0;
+    color: rgb(0, 119, 255);
+}
+
+.statusOpen{
+    background-color: var(--green);
+    color: ivory;
+    border: none;
+    border-radius: 2px;
+}
+
+.statusClosed{
+    background-color: var(--orange);
+    color: ivory;
+    border: none;
+    border-radius: 2px;
+}
+
+.statusInProgress{
+    background-color: var(--yellow);
+    color: ivory;
+    border: none;
+    border-radius: 2px;
+}
