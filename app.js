@@ -21,7 +21,7 @@ $(document).ready(function () {
             if (response == false) {
                 $('#result').html("<h2> ERROR </h2>" + "<br>" + "The email address or password is incorrect");
             } else {
-                window.location = "issuesAll.html";
+                $(location).attr('href',"issuesAll.html");
             }
 
         }).fail(function () {
