@@ -1,33 +1,27 @@
+window.onload = function(){
+    var submit = document.getElementById("submit_createuser");
 
-
-
-
-$(document).ready(function () {
-    let srchBtn = $('#submit_createuser');
-
-
-    srchBtn.on('click', function (e) {
+    submit.addEventListener('click',function(e){
         e.preventDefault();
-        let fname = $("#firstname").val();
-        let lname = $("#lastname").val();
-        let email = $("#email").val();
-        let password = $("#password").val();
+        var fname = document.getElementById('firstname').value
+        var lname = document.getElementById('lastname').value
+        var email = document.getElementById('email').value
+        var password = document.getElementById('password').value
+        var user = {}
 
-        $.ajax("createUser.php", {
-            method: "POST",
-            data: {
-                firstname: fname,
-                lastname: lname,
-                email: email,
-                password: password
+        user.firstname = fname;
+        user.lastname = lname;
+        user.email = email;
+        user.password = password;
 
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST','newUser.php',true)
+        xhr.onload = function(){
+            if(this.status == 200){
+                console.log(this.response)
             }
-        }).done(function (response) {
-            console.log(response);
-            //alert("successfully sent to the database to be added")
-        }).fail(function () {
-            alert("An error occured.");
-        });
-    });
+        }
+        xhr.send(JSON.stringify(user)); 
 
-});
+    })
+}
