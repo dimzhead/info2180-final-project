@@ -8,7 +8,6 @@
     <title>INFO2180-Final-Project</title>
     <link rel="stylesheet" href="assets/css/createIssue.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="createIssue.js"></script>
     <script src="app.js"></script>
 </head>
 
@@ -71,23 +70,25 @@
                     <textarea name="Text1" cols="53" rows="5" id ='issue-description'></textarea>
                     <br><br>
                     Assigned To<br>
-                    <div id="users">
-
-                    </div>
-                    <!--
                     <select  class = "select" id = 'assignto'>
                      <option value="0" >Marcia Brady</option>   
-                    </select>-->
+                    </select>
                     <br><br>
                     Type <br>
                     <select  class = "select" id = 'type'>
-                    <option value="0">Bug</option>    
+                    <option value="0">Bug</option>  
+                    <option value="1">Proposal</option>  
+                    <option value="2">Task</option>    
                     </select>
                     <br><br>
                     Priority 
                     <br>
                     <select  class = "select" id = 'priority'>
-                     <option value="0">Major</option>   
+                     <option value="0">Minor</option>
+                     <option value="1">Major</option>
+                     <option value="1">CriticalMajor</option>
+                     
+                     
                     </select>
                     
                     <br><br>
